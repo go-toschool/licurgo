@@ -18,7 +18,7 @@ $ goose -path . -env [development|docker|kubernetes] up
 If you are not using docker or kubernetes, create a new database in your system with:
 
 ```
-$ createdbd drachma
+$ createdb drachma
 ```
 
 then run the corresponding migrations.
