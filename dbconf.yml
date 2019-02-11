@@ -1,6 +1,6 @@
 development:
   driver: postgres
-  dsn: postgres://localhost/drachma?sslmode=disable
+  dsn: postgres://gotoschool:goto1234@localhost/drachma?sslmode=disable
 
 test:
   driver: postgres
