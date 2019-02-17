@@ -2,14 +2,13 @@
 -- SQL in section 'Up' is executed when this migration is applied
 -- +goose StatementBegin
 create table if not exists talks (
-	id                       uuid primary key default gen_random_uuid(),
-	title                    text not null,
-	description              text not null,
-	repository               text not null,
-	attendance_date          timestamptz not null,
-	tags                     text default '',
-	users_id                 uuid references users(id),
-
+	id                   uuid primary key default gen_random_uuid(),
+	title                text not null,
+	description          text not null,
+	repository           text not null,
+	attendance_date      timestamptz not null,
+	tags                 text default '',
+	user_id              uuid references users(id),
 
 	created_at      timestamptz default now(),
 	updated_at      timestamptz default now(),

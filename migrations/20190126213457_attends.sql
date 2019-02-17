@@ -3,6 +3,7 @@
 
 create table if not exists assistants (
   id            uuid primary key default gen_random_uuid(),
+  talk_id       uuid references talks(id),
   speaker       uuid references users(id),
   assistant     uuid references users(id),
 
